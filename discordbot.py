@@ -24,7 +24,7 @@ async def ping(ctx):
     await ctx.send('pong')
     
 @bot.command()
-async def buki(ctx):
+async def pong(ctx):
     await ctx.send('buki')
     
 

@@ -19,9 +19,7 @@ async def ping(ctx):
     
 @bot.command()
 async def play(ctx):
-    await ctx.send('!p only my railgun\n!p sister’s noise\n!p Level5judgelight\n
-                    !p no buts\n!p dear my friend とある\n!p PSI missing\n
-                    !p final phase\n!p future gazer\n!p eternal reality fripside')
+    await ctx.send('!p only my railgun')
 
 
 bot.run(token)

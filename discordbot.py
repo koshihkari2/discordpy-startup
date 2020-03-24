@@ -19,6 +19,11 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def buki(ctx):
     await ctx.send(random.choice(random_list))
+   
+
+@bot.command()
+async def login(ctx):
+    await ctx.send('ログインしました')
 
 
 bot.run(token)

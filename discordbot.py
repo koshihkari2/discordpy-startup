@@ -23,7 +23,7 @@ async def buki(ctx):
    
 
 @bot.command()
-async def login1(ctx):
+async def login(ctx):
     await ctx.send('ログインしています')
     
 @bot.command()

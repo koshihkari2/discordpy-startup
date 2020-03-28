@@ -28,7 +28,15 @@ async def login(ctx):
     
 @bot.command()
 async def test(ctx):
+    await ctx.send(random.choice(random_list[0:32]))
+    
+@bot.command()
+async def test1(ctx):
     await ctx.send(random_list[32])
+    
+@bot.command()
+async def kakunin(ctx):
+    await ctx.send('52ガロンベッチュー')
 
 
 bot.run(token)

@@ -10,8 +10,6 @@ random_list = ['わかばシューター','もみじシューター','おちば�
 
 syuter_list = random_list[0:33]
 
-for num in range(len(list)):
-    random_num = list[num]
 
 @bot.event
 async def on_command_error(ctx, error):

@@ -38,7 +38,7 @@ async def buki(ctx,arg):
         await ctx.send(random.choice(random_list[87:93]))
     elif arg == 'シェルター':
         await ctx.send(random.choice(random_list[118:]))
-    elif arg == '':
+    elif arg == 'all':
         await ctx.send(random.choice(random_list))
 
 @bot.command()

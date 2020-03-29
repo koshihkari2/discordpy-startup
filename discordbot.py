@@ -25,7 +25,7 @@ async def buki(ctx):
     await ctx.send(random.choice(random_list))
    
 @bot.command()
-async def login1(ctx):
+async def login(ctx):
     await ctx.send('ログインしています')
     
 @bot.command()
@@ -33,7 +33,7 @@ async def manyu(ctx):
     await ctx.send(random.choice(random_list[33:48]))
     
 @bot.command()
-async def test(ctx):
+async def tyajya(ctx):
     await ctx.send(random.choice(random_list[48:66]))
     
 @bot.command()
@@ -41,12 +41,12 @@ async def shooter(ctx):
     await ctx.send(random.choice(random_list[0:33]))
     
 @bot.command()
-async def test1(ctx):
+async def burasuta(ctx):
     await ctx.send(random.choice(random_list[66:81]))
     
 @bot.command()
-async def kakunin(ctx):
-    await ctx.send(f'{random_num}{random_list}')
+async def rora(ctx):
+    await ctx.send(random.choice(random_list[81:92]))
 
 
 bot.run(token)

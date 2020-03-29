@@ -10,6 +10,9 @@ random_list = ['わかばシューター','もみじシューター','おちば�
 
 syuter_list = random_list[0:33]
 
+for num in range(len(list)):
+    random_num = list[num]
+
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
@@ -40,6 +43,10 @@ async def shooter(ctx):
 @bot.command()
 async def test1(ctx):
     await ctx.send(random.choice(random_list[66:81]))
+    
+@bot.command()
+async def kakunin(ctx):
+    await ctx.send(f'{random_num}{random_list}')
 
 
 bot.run(token)

@@ -23,32 +23,32 @@ async def buki(ctx):
     await ctx.send(random.choice(random_list))
    
 @bot.command()
-async def login(ctx):
+async def login1(ctx):
     await ctx.send('ログインしています')
     
 @bot.command()
 async def manyu(ctx):
-    await ctx.send(random.choice(random_list[33:47]))
+    await ctx.send(random.choice(random_list[32:46]))
     
 @bot.command()
 async def tyajya(ctx):
-    await ctx.send(random.choice(random_list[47:64]))
+    await ctx.send(random.choice(random_list[46:64]))
     
 @bot.command()
 async def shooter(ctx):
-    await ctx.send(random.choice(random_list[0:33]))
+    await ctx.send(random.choice(random_list[0:32]))
     
 @bot.command()
 async def burasuta(ctx):
-    await ctx.send(random.choice(random_list[64:78]))
+    await ctx.send(random.choice(random_list[64:77]))
     
 @bot.command()
 async def rora(ctx):
-    await ctx.send(random.choice(random_list[78:88]))
+    await ctx.send(random.choice(random_list[77:87]))
 
 @bot.command()
 async def hude(ctx):
-    await ctx.send(random.choice(random_list[88:94]))
+    await ctx.send(random.choice(random_list[87:93]))
     
 @bot.command()
 async def surossya(ctx):

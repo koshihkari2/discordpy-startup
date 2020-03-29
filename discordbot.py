@@ -22,7 +22,7 @@ async def buki(ctx):
     await ctx.send(random.choice(random_list))
    
 @bot.command()
-async def login(ctx):
+async def login1(ctx):
     await ctx.send('ログインしています')
     
 @bot.command()
@@ -31,15 +31,15 @@ async def manyu(ctx):
     
 @bot.command()
 async def test(ctx):
-    await ctx.send('a')
+    await ctx.send(random.choice(random_list[48:66])
     
 @bot.command()
 async def shooter(ctx):
     await ctx.send(random.choice(random_list[0:33]))
     
 @bot.command()
-async def manyut(ctx):
-    await ctx.send('random.choice(manyu_list)')
+async def test1(ctx):
+    await ctx.send(random.choice(random_list[66:81]))
 
 
 bot.run(token)

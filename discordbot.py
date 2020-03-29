@@ -30,15 +30,15 @@ async def manyu(ctx):
     await ctx.send(random.choice(random_list[33:48]))
     
 @bot.command()
-async def test1(ctx):
-    await ctx.send('test1')
+async def test(ctx):
+    await ctx.send('a')
     
 @bot.command()
 async def shooter(ctx):
     await ctx.send(random.choice(random_list[0:33]))
     
 @bot.command()
-async def manyu(ctx):
+async def manyut(ctx):
     await ctx.send('random.choice(manyu_list)')
 
 

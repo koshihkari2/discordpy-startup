@@ -31,7 +31,7 @@ async def manyu(ctx):
     
 @bot.command()
 async def test(ctx):
-    await ctx.send(random.choice(random_list[48:66])
+    await ctx.send(random.choice(random_list[48:66]))
     
 @bot.command()
 async def shooter(ctx):

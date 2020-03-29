@@ -20,9 +20,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def buki(ctx,arg):
-    if arg == None:
-        await ctx.send(random.choice(random_list))
-    elif arg == 'マニューバー':
+    if arg == 'マニューバー':
         await ctx.send(random.choice(random_list[32:46]))
     elif arg == 'シューター':
         await ctx.send(random.choice(random_list[0:32]))
@@ -39,10 +37,12 @@ async def buki(ctx,arg):
     elif arg == 'フデ':
         await ctx.send(random.choice(random_list[87:93]))
     elif arg == 'シェルター':
-        await ctx.send(random.choice(random_list[118:]))        
+        await ctx.send(random.choice(random_list[118:]))
+    else:
+        await ctx.send(random.choice(random_list))
 
 @bot.command()
-async def login(ctx):
+async def login1(ctx):
     await ctx.send('ログインしています')
     
 @bot.command()

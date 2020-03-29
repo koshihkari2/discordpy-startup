@@ -46,6 +46,10 @@ async def burasuta(ctx):
 async def rora(ctx):
     await ctx.send(random.choice(random_list[81:92]))
 
+@bot.command()
+async def hude(ctx):
+    await ctx.send(random.choice(random_list[92:99]))
+
 
 bot.run(token)
 

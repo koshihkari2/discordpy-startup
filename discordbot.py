@@ -19,6 +19,10 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
+async def buki(ctx,buki_name = "buki"):
+    pass
+    
+@bot.command()
 async def buki(ctx,arg):
     if arg == 'マニューバー':
         await ctx.send(random.choice(random_list[32:46]))
@@ -42,7 +46,7 @@ async def buki(ctx,arg):
         await ctx.send(random.choice(random_list))
 
 @bot.command()
-async def login(ctx):
+async def login1(ctx):
     await ctx.send('ログインしています')
     
 @bot.command()

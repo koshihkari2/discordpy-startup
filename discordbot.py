@@ -22,11 +22,11 @@ async def buki(ctx):
     await ctx.send(random.choice(random_list))
    
 @bot.command()
-async def login1(ctx):
+async def login(ctx):
     await ctx.send('ログインしています')
     
 @bot.command()
-async def test(ctx):
+async def manyu(ctx):
     await ctx.send(random.choice(random_list[33:48]))
     
 @bot.command()

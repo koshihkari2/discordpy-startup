@@ -28,11 +28,11 @@ async def login(ctx):
     
 @bot.command()
 async def manyu(ctx):
-    await ctx.send(random.choice(random_list[33:48]))
+    await ctx.send(random.choice(random_list[33:47]))
     
 @bot.command()
 async def tyajya(ctx):
-    await ctx.send(random.choice(random_list[48:66]))
+    await ctx.send(random.choice(random_list[47:64]))
     
 @bot.command()
 async def shooter(ctx):
@@ -40,15 +40,27 @@ async def shooter(ctx):
     
 @bot.command()
 async def burasuta(ctx):
-    await ctx.send(random.choice(random_list[66:81]))
+    await ctx.send(random.choice(random_list[64:78]))
     
 @bot.command()
 async def rora(ctx):
-    await ctx.send(random.choice(random_list[81:92]))
+    await ctx.send(random.choice(random_list[78:88]))
 
 @bot.command()
 async def hude(ctx):
-    await ctx.send(random.choice(random_list[92:99]))
+    await ctx.send(random.choice(random_list[88:94]))
+    
+@bot.command()
+async def surossya(ctx):
+    await ctx.send(random.choice(random_list[94:106]))
+    
+@bot.command()
+async def supina(ctx):
+    await ctx.send(random.choice(random_list[106:118]))
+    
+@bot.command()
+async def kasa(ctx):
+    await ctx.send(random.choice(random_list[118:]))
 
 
 bot.run(token)

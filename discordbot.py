@@ -42,7 +42,7 @@ async def buki(ctx,arg):
         await ctx.send(random.choice(random_list))
 
 @bot.command()
-async def login(ctx):
+async def login1(ctx):
     await ctx.send('ログインしています')
     
 @bot.command()

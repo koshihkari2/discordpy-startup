@@ -23,43 +23,43 @@ async def buki(ctx):
     await ctx.send(random.choice(random_list))
    
 @bot.command()
-async def login1(ctx):
+async def login(ctx):
     await ctx.send('ログインしています')
     
 @bot.command()
-async def manyu(ctx):
+async def ma(ctx):
     await ctx.send(random.choice(random_list[32:46]))
     
 @bot.command()
-async def tyajya(ctx):
+async def cya(ctx):
     await ctx.send(random.choice(random_list[46:64]))
     
 @bot.command()
-async def shooter(ctx):
+async def syu(ctx):
     await ctx.send(random.choice(random_list[0:32]))
     
 @bot.command()
-async def burasuta(ctx):
+async def bu(ctx):
     await ctx.send(random.choice(random_list[64:77]))
     
 @bot.command()
-async def rora(ctx):
+async def ro(ctx):
     await ctx.send(random.choice(random_list[77:87]))
 
 @bot.command()
-async def hude(ctx):
+async def hu(ctx):
     await ctx.send(random.choice(random_list[87:93]))
     
 @bot.command()
-async def surossya(ctx):
+async def sur(ctx):
     await ctx.send(random.choice(random_list[94:106]))
     
 @bot.command()
-async def supina(ctx):
+async def sup(ctx):
     await ctx.send(random.choice(random_list[106:118]))
     
 @bot.command()
-async def kasa(ctx):
+async def ka(ctx):
     await ctx.send(random.choice(random_list[118:]))
 
 

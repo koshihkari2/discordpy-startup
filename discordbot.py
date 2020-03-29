@@ -38,11 +38,11 @@ async def buki(ctx,arg):
         await ctx.send(random.choice(random_list[87:93]))
     elif arg == 'シェルター':
         await ctx.send(random.choice(random_list[118:]))
-    elif arg == 'all':
+    elif arg == None:
         await ctx.send(random.choice(random_list))
 
 @bot.command()
-async def login1(ctx):
+async def login(ctx):
     await ctx.send('ログインしています')
     
 @bot.command()

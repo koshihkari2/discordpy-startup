@@ -20,7 +20,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def buki(ctx,arg):
-    if arg == none:
+    if arg == None:
         await ctx.send(random.choice(random_list))
     elif arg == 'マニューバー':
         await ctx.send(random.choice(random_list[32:46]))

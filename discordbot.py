@@ -61,12 +61,6 @@ async def sup(ctx):
 @bot.command()
 async def ka(ctx):
     await ctx.send(random.choice(random_list[118:]))
-    
-@bot.command()
-async def help(ctx):
-    await ctx.send('このbotはSplatoon2の武器をランダムで選ぶボットです。bukiコマンドで全武器の中からランダムで選びます。'
-                   '武器の種類はmaコマンドでマニューバー、syuコマンドでシューター、cyaコマンドでチャージャー、huコマンドでフデ、'
-                   'kaコマンドでシェルター、roコマンドでローラー、supコマンドでスピナー、surコマンドでスロッシャー、buコマンドでブラスターに限定できます。')
 
 
 bot.run(token)

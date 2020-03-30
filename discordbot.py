@@ -27,9 +27,9 @@ async def buki(ctx,arg='スベテ'):
     elif arg == 'ローラー':
         await ctx.send(random.choice(random_list[77:87]))
     elif arg == 'チャージャー':
-        await ctx.send(random.choice(random_list[46:64]))
+        await ctx.send(random.choice(random_list[46:63]))
     elif arg == 'ブラスター':
-        await ctx.send(random.choice(random_list[64:77]))        
+        await ctx.send(random.choice(random_list[63:77]))        
     elif arg == 'スピナー':
         await ctx.send(random.choice(random_list[106:118]))   
     elif arg == 'スロッシャー':

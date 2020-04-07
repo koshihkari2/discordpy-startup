@@ -86,7 +86,7 @@ async def ka(ctx):
 
 
 @bot.command()
-async def kanji(ctx,yomikaki):
+async def kanji(ctx,yomi,kaki):
     await ctx.channel.send(f'「{yomi}」を漢字で書くと：||{kaki}||')
     await ctx.message.delete()
 

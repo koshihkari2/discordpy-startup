@@ -12,6 +12,12 @@ syuter_list = random_list[0:33]
 
 
 @bot.event
+async def on_ready():
+    CHANNEL_ID = 684761828483792943
+    channel = bot.get_channel(CHANNEL_ID)
+    await channel.send('おはよう！')
+
+@bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
@@ -42,12 +48,12 @@ async def buki(ctx,arg='スベテ'):
         await ctx.send(random.choice(random_list))
 
 @bot.command()
-async def login1(ctx):
+async def login(ctx):
     await ctx.send('ログインしています')
     
 @bot.command()
 async def ma(ctx):
-    await ctx.send(random.choice(random_list[32:46]))
+    await ctx.send(random.choice(random_list[33:46]))
     
 @bot.command()
 async def cya(ctx):
@@ -55,7 +61,7 @@ async def cya(ctx):
     
 @bot.command()
 async def syu(ctx):
-    await ctx.send(random.choice(random_list[0:32]))
+    await ctx.send(random.choice(random_list[0:33]))
     
 @bot.command()
 async def bu(ctx):
@@ -81,10 +87,12 @@ async def sup(ctx):
 async def ka(ctx):
     await ctx.send(random.choice(random_list[118:]))
 
+
 @bot.command()
-async def all(ctx):
-    await ctx.send(random.choice(random_list))
+async def kanji(ctx,yomikaki):
+    await ctx.channel.send(f'「{yomi}」を漢字で書くと：||{kaki}||')
+    await ctx.message.delete()
 
-
+    
 bot.run(token)
 

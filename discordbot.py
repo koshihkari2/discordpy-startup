@@ -46,10 +46,7 @@ async def buki(ctx,arg='スベテ'):
         await ctx.send(random.choice(random_list[118:]))
     elif arg == 'スベテ':
         await ctx.send(random.choice(random_list))
-
-@bot.command()
-async def login(ctx):
-    await ctx.send('ログインしています')
+        
     
 @bot.command()
 async def ma(ctx):

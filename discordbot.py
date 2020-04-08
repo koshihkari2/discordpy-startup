@@ -86,12 +86,9 @@ async def ka(ctx):
 
 
 @bot.command()
-async def kan(ctx,yomi=0,kaki=0):
-    if yomi ==0 or kaki == 0:
-        pass
-    else:
-        await ctx.channel.send(f'「{yomi}」を漢字で書くと：||{kaki}||')
-        await ctx.message.delete()
+async def kan(ctx,yomi,kaki):
+    await ctx.channel.send(f'「{yomi}」を漢字で書くと：||{kaki}||')
+    await ctx.message.delete()
 
     
 bot.run(token)

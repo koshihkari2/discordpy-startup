@@ -89,6 +89,11 @@ async def ka(ctx):
 async def kan(ctx,yomi,kaki):
     await ctx.channel.send(f'「{yomi}」を漢字で書くと：||{kaki}||')
     await ctx.message.delete()
+    
+@bot.command()
+async def eng(ctx,japanese,english):
+    await ctx.channel.send(f'「{japanese}」を英語で書くと：||{english}||')
+    await ctx.message.delete()
 
     
 bot.run(token)

@@ -12,7 +12,7 @@ def wikipediaSearch(search_word):
 	try:
 		wiki_page = wikipedia.page(search_response[0])
 	except Exception as e:
-		response_string = "エラーが発生しました。
+		response_string = "エラーが発生しました。\n{}\n{}".format(e.message, str(e))
 		return response_string
 	wiki_content = wiki_page.content
 	response_string += wiki_content[0:wiki_content.find("。")] + "。\n"

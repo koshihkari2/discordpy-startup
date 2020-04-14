@@ -2,6 +2,7 @@ from discord.ext import commands
 import os
 import traceback
 import wikipedia
+import wikitry
 
 bot = commands.Bot(command_prefix='?')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -95,6 +96,12 @@ async def kan(ctx,yomi,kaki):
 async def eng(ctx,japanese,english):
     await ctx.channel.send(f'「{japanese}」を英語で書くと：||{english}||')
     await ctx.message.delete()
+   
+@bot.command()
+async def wiki(ctx,search_word=''):
+    result = wikitry.wikipediaSearch(search_word)
+    await ctx.send(result)
+
 
     
 bot.run(token)

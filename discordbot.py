@@ -98,7 +98,7 @@ async def eng(ctx,japanese,english):
     await ctx.message.delete()
    
 @bot.command()
-async def wiki(ctx,search_word=''):
+async def wiki(ctx,search_word='電波人間のRPG'):
     result = wikitry.wikipediaSearch(search_word)
     await ctx.send(result)
 

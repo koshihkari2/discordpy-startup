@@ -98,8 +98,8 @@ async def eng(ctx,japanese,english):
     await ctx.message.delete()
    
 @bot.command()
-async def wiki(ctx,search_word='No Word'):
-    if search_word is not 'No Word':
+async def wiki(ctx,search_word=' '):
+    if search_word is not ' ':
         result = wikitry.wikipediaSearch(search_word)
         await ctx.send(result)
     else:

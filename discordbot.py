@@ -5,6 +5,7 @@ import wikipedia
 import wikitry
 from discord.ext import tasks
 from datetime import datetime 
+import requests
 
 
 CHANNEL_ID = 684761828483792943

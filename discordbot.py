@@ -46,6 +46,12 @@ async def on_command_error(ctx, error):
     
 @bot.command()
 async def buki(ctx,arg='スベテ'):
+    """
+    ランダムで武器をひとつ選びます
+    シューター・マニューバー・ローラー・チャージャー・ブラスター・
+    スピナー・スロッシャー・フデ・シェルターから種類を指定できます。
+    何も指定しなかった場合はすべての武器からランダムで選びます。
+    """
     if arg == 'マニューバー':
         await ctx.send(random.choice(random_list[33:46]))
     elif arg == 'シューター':
@@ -70,16 +76,25 @@ async def buki(ctx,arg='スベテ'):
 
 @bot.command()
 async def kan(ctx,yomi,kaki):
+    """
+    漢字テスト対策用コマンドです。
+    """
     await ctx.channel.send(f'「{yomi}」を漢字で書くと：||{kaki}||')
     await ctx.message.delete()
     
 @bot.command()
 async def eng(ctx,japanese,english):
+    """
+    英単語テスト対策用コマンドです。
+    """
     await ctx.channel.send(f'「{japanese}」を英語で書くと：||{english}||')
     await ctx.message.delete()
    
 @bot.command()
 async def wiki(ctx,*,args):
+    """
+    入力された単語をwikiで調べます。
+    """
     result = wikitry.wikipediaSearch(args)
     print(args)
     embed = discord.Embed(title='検索結果',description=result,color=0X98FB98)
@@ -87,6 +102,9 @@ async def wiki(ctx,*,args):
     
 @bot.command()
 async def weather(ctx):
+    """
+    こしひかり居住区の天気を知ることができます
+    """
     result = weather_search()
     word_num = len(result)
     if word_num == 2:

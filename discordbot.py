@@ -115,12 +115,11 @@ async def eng(ctx,japanese,english):
     await ctx.message.delete()
    
 @bot.command()
-async def wiki(ctx,search_word=' '):
-    if search_word is not ' ':
-        result = wikitry.wikipediaSearch(search_word)
-        await ctx.send(result)
-    else:
-        pass
+async def wiki(ctx,*,args):
+    result = wikitry.wikipediaSearch(args)
+    print(args)
+    embed = discord.Embed(title='検索結果',description=result,color=0X98FB98)
+    await ctx.send(embed=embed)
     
 @bot.command()
 async def weather(ctx):

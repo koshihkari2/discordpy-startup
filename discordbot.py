@@ -29,17 +29,6 @@ def weather_search():
     return result_list
 
 
-@tasks.loop(seconds=60)
-async def loop():
-    # 現在の時刻
-    now = datetime.now().strftime('%H:%M')
-    if now == '07:00':
-        result = weather_search()
-        reply = f'★葛飾区の天気★\n{result[0]}\n{result[1]}\n{result[2]}'
-        channel = bot.get_channel(CHANNEL_ID)
-        await channel.send(reply)  
-
-
 
 @bot.event
 async def on_ready():
@@ -138,9 +127,9 @@ async def weather(ctx):
     result = weather_search()
     word_num = len(result)
     if word_num == 2:
-        reply = f'★葛飾区の天気★\n{result[0]}\n{result[1]}'
+        reply = f'★こしひかり居住区の天気★\n{result[0]}\n{result[1]}'
     elif word_num == 3:
-        reply = f'★葛飾区の天気★\n{result[0]}\n{result[1]}\n{result[2]}'
+        reply = f'★こしひかり居住区の天気★\n{result[0]}\n{result[1]}\n{result[2]}'
     else:
         reply = 'エラーだよ！'
     await ctx.send(reply)

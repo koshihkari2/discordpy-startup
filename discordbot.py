@@ -81,7 +81,7 @@ async def kanji(ctx,yomi,kaki):
 async def english(ctx,japanese,english):
     """
     英単語テスト対策用コマンドです。
-    =eng 遊ぶ　play　のように使用します。
+    =eng 日本語　英語　のように使用します。
     """
     await ctx.channel.send(f'「{japanese}」を英語で書くと：||{english}||')
     await ctx.message.delete()

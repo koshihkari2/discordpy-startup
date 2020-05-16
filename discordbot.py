@@ -133,7 +133,7 @@ async def weather(ctx):
     else:
         reply = 'エラーだよ！'
     embed = discord.Embed(title='★こしひかり居住区の天気★',description=reply,color=0X00BFFF)
-    await ctx.send(reply)
+    await ctx.send(embed=embed)
 
 
     

@@ -74,16 +74,16 @@ async def buki(ctx,arg='スベテ'):
         await ctx.send(random.choice(random_list))
 
 
-@bot.command()
-async def kan(ctx,yomi,kaki):
+@bot.command(aliases=["kan"])
+async def kanji(ctx,yomi,kaki):
     """
     漢字テスト対策用コマンドです。
     """
     await ctx.channel.send(f'「{yomi}」を漢字で書くと：||{kaki}||')
     await ctx.message.delete()
     
-@bot.command()
-async def eng(ctx,japanese,english):
+@bot.command(aliases=["eng"])
+async def english(ctx,japanese,english):
     """
     英単語テスト対策用コマンドです。
     """

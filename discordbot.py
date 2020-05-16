@@ -46,9 +46,9 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def buki(ctx,arg='スベテ'):
     if arg == 'マニューバー':
-        await ctx.send(random.choice(random_list[32:46]))
+        await ctx.send(random.choice(random_list[33:46]))
     elif arg == 'シューター':
-        await ctx.send(random.choice(random_list[0:32]))
+        await ctx.send(random.choice(random_list[0:33]))
     elif arg == 'ローラー':
         await ctx.send(random.choice(random_list[77:87]))
     elif arg == 'チャージャー':
@@ -126,11 +126,12 @@ async def weather(ctx):
     result = weather_search()
     word_num = len(result)
     if word_num == 2:
-        reply = f'★こしひかり居住区の天気★\n{result[0]}\n{result[1]}'
+        reply = result[0] + result[1]
     elif word_num == 3:
-        reply = f'★こしひかり居住区の天気★\n{result[0]}\n{result[1]}\n{result[2]}'
+        reply = {result[0]} + {result[1]} + {result[2]}
     else:
         reply = 'エラーだよ！'
+    embed = discord.Embed(title='★こしひかり居住区の天気★',description=reply,color=0X00BFFF)
     await ctx.send(reply)
 
 

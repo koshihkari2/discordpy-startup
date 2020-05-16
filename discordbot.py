@@ -127,9 +127,9 @@ async def weather(ctx):
     result = weather_search()
     word_num = len(result)
     if word_num == 2:
-        reply = result[0] + result[1]
+        reply = f'{result[0]}\n{result[1]}'
     elif word_num == 3:
-        reply = result[0] + result[1] + result[2]
+        reply = f'{result[0]}\n{result[1]}\n{result[2]}'
     else:
         reply = 'エラーだよ！'
     embed = discord.Embed(title='★こしひかり居住区の天気★',description=reply,color=0X00BFFF)

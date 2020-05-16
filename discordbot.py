@@ -66,43 +66,6 @@ async def buki(ctx,arg='スベテ'):
         await ctx.send(random.choice(random_list[118:]))
     elif arg == 'スベテ':
         await ctx.send(random.choice(random_list))
-        
-    
-@bot.command()
-async def ma(ctx):
-    await ctx.send(random.choice(random_list[33:46]))
-    
-@bot.command()
-async def cya(ctx):
-    await ctx.send(random.choice(random_list[46:64]))
-    
-@bot.command()
-async def syu(ctx):
-    await ctx.send(random.choice(random_list[0:33]))
-    
-@bot.command()
-async def bu(ctx):
-    await ctx.send(random.choice(random_list[64:77]))
-    
-@bot.command()
-async def ro(ctx):
-    await ctx.send(random.choice(random_list[77:87]))
-
-@bot.command()
-async def hu(ctx):
-    await ctx.send(random.choice(random_list[87:93]))
-    
-@bot.command()
-async def sur(ctx):
-    await ctx.send(random.choice(random_list[94:106]))
-    
-@bot.command()
-async def sup(ctx):
-    await ctx.send(random.choice(random_list[106:118]))
-    
-@bot.command()
-async def ka(ctx):
-    await ctx.send(random.choice(random_list[118:]))
 
 
 @bot.command()

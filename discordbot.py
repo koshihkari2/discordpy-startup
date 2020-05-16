@@ -10,7 +10,7 @@ import discord
 
 
 CHANNEL_ID = 684761828483792943
-bot = commands.Bot(command_prefix='?')
+bot = commands.Bot(command_prefix='=')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
@@ -72,6 +72,7 @@ async def buki(ctx,arg='スベテ'):
 async def kanji(ctx,yomi,kaki):
     """
     漢字テスト対策用コマンドです。
+    =kan 読み　書き　のように使用します。
     """
     await ctx.channel.send(f'「{yomi}」を漢字で書くと：||{kaki}||')
     await ctx.message.delete()
@@ -80,6 +81,7 @@ async def kanji(ctx,yomi,kaki):
 async def english(ctx,japanese,english):
     """
     英単語テスト対策用コマンドです。
+    =eng 遊ぶ　play　のように使用します。
     """
     await ctx.channel.send(f'「{japanese}」を英語で書くと：||{english}||')
     await ctx.message.delete()

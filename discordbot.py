@@ -20,9 +20,14 @@ random_list = ['わかばシューター','もみじシューター','おちば�
 syuter_list = random_list[0:33]
 
 
-def weather_search():
+def weather_search(user_id):
+    #{user_id(int):weather_id(str)}
+    id_dict = {625161458145034270:'130010',677040897514536960:'120010'}
     url = 'http://weather.livedoor.com/forecast/webservice/json/v1?'
-    query_params = {'city': '130010'}
+    try:
+        query_params = {'city': id_dict[user_id]}
+    except KeyError:
+        return ['あなたの居住区は登録されていません','登録を希望する場合はこしひかりに連絡連絡～♪']
     result_list = []
     data = requests.get(url, params=query_params).json()
     for weather in data['forecasts']:
@@ -99,9 +104,10 @@ async def wiki(ctx,*,args):
 @bot.command()
 async def weather(ctx):
     """
-    こしひかり居住区の天気を知ることができます
+    コマンド実行者居住区の天気を知ることができます
     """
-    result = weather_search()
+    result = weather_search(ctx.author.id)
+    title_name = f'★{ctx.author}居住区の天気★'
     word_num = len(result)
     if word_num == 2:
         reply = f'{result[0]}\n{result[1]}'
@@ -109,7 +115,7 @@ async def weather(ctx):
         reply = f'{result[0]}\n{result[1]}\n{result[2]}'
     else:
         reply = 'エラーだよ！'
-    embed = discord.Embed(title='★こしひかり居住区の天気★',description=reply,color=0X00BFFF)
+    embed = discord.Embed(title=title_name,description=reply,color=0X00BFFF)
     await ctx.send(embed=embed)
 
 

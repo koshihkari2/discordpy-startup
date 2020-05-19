@@ -107,7 +107,7 @@ async def weather(ctx):
     コマンド実行者居住区の天気を知ることができます
     """
     result = weather_search(ctx.author.id)
-    title_name = f'★{ctx.author}居住区の天気★'
+    title_name = f'★{ctx.author.name}居住区の天気★'
     word_num = len(result)
     if word_num == 2:
         reply = f'{result[0]}\n{result[1]}'

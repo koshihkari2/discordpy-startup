@@ -22,7 +22,7 @@ syuter_list = random_list[0:33]
 
 def weather_search(user_id):
     #{user_id(int):weather_id(str)}
-    id_dict = {625161458145034270:'130010',677040897514536960:'120010'}
+    id_dict = {625161458145034270:'130010',677040897514536960:'120010',475916023690821642:'140020'}
     url = 'http://weather.livedoor.com/forecast/webservice/json/v1?'
     try:
         query_params = {'city': id_dict[user_id]}

@@ -141,7 +141,7 @@ async def wikitest(ctx,*,search_word):
         def check(m):
             return m.author == ctx.author and m.channel == ctx.channel and 1 <= int(m.content) <= len(search)
 
-        base_index = await self.bot.wait_for('message',check=check,timeout=60)
+        base_index = await bot.wait_for('message',check=check,timeout=60)
         index = int(base_index.content) - 1
         try:
             wiki_page = wikipedia.page(search[index])

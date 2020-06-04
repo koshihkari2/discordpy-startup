@@ -121,41 +121,41 @@ async def weather(ctx):
     await ctx.send(embed=embed)
     
 @bot.command()
-    async def wikitest(ctx,*,search_word):
-        """
-        テスト中！使わないで！
-        """
-        wikipedia.set_lang('ja')
-        number = 0
-        express = ''
-        search = wikipedia.search(search_word)
-        for i in search:
-            #print(str(number) + i)
-            number += 1
-            express += str(number) + ':' + i + '\n'
-        embed = discord.Embed(title='検索候補',description=express,color=0x00FFFF)
-        await ctx.send(embed=embed)
+async def wikitest(ctx,*,search_word):
+    """
+    テスト中！使わないで！
+    """
+    wikipedia.set_lang('ja')
+    number = 0
+    express = ''
+    search = wikipedia.search(search_word)
+    for i in search:
+        #print(str(number) + i)
+        number += 1
+        express += str(number) + ':' + i + '\n'
+    embed = discord.Embed(title='検索候補',description=express,color=0x00FFFF)
+    await ctx.send(embed=embed)
 
-        if len(search) > 0:
+    if len(search) > 0:
 
-            def check(m):
-                return m.author == ctx.author and m.channel == ctx.channel and 1 <= int(m.content) <= len(search)
+        def check(m):
+            return m.author == ctx.author and m.channel == ctx.channel and 1 <= int(m.content) <= len(search)
 
-            base_index = await self.bot.wait_for('message',check=check,timeout=60)
-            index = int(base_index.content) - 1
-            try:
-                wiki_page = wikipedia.page(search[index])
-            except Exception:
-                responce_word = 'エラーだよ！'
-            else:
-                wiki_content = wiki_page.content
-                responce_word = wiki_content[0:wiki_content.find("。")] + "。\n"
-                responce_word += wiki_page.url
+        base_index = await self.bot.wait_for('message',check=check,timeout=60)
+        index = int(base_index.content) - 1
+        try:
+            wiki_page = wikipedia.page(search[index])
+        except Exception:
+            responce_word = 'エラーだよ！'
         else:
-            responce_word = 'その単語は登録されてないよ！'
+            wiki_content = wiki_page.content
+            responce_word = wiki_content[0:wiki_content.find("。")] + "。\n"
+            responce_word += wiki_page.url
+    else:
+        responce_word = 'その単語は登録されてないよ！'
     
-        embed = discord.Embed(title='検索結果', description=responce_word, color=0x00FFFF)
-        await ctx.send(embed=embed)
+    embed = discord.Embed(title='検索結果', description=responce_word, color=0x00FFFF)
+    await ctx.send(embed=embed)
 
 
     

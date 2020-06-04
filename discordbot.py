@@ -121,7 +121,7 @@ async def weather(ctx):
     await ctx.send(embed=embed)
     
 @bot.command()
-    async def wikitest(self,ctx,*,search_word):
+    async def wikitest(ctx,*,search_word):
         """
         テスト中！使わないで！
         """

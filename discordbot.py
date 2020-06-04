@@ -2,7 +2,6 @@ from discord.ext import commands
 import os
 import traceback
 import wikipedia
-import wikitry
 from discord.ext import tasks
 from datetime import datetime 
 import requests
@@ -92,16 +91,6 @@ async def english(ctx,japanese,english):
     """
     await ctx.channel.send(f'「{japanese}」を英語で書くと：||{english}||')
     await ctx.message.delete()
-   
-@bot.command()
-async def wiki(ctx,*,args):
-    """
-    入力された単語をwikiで調べます。
-    """
-    result = wikitry.wikipediaSearch(args)
-    print(args)
-    embed = discord.Embed(title='検索結果',description=result,color=0X98FB98)
-    await ctx.send(embed=embed)
     
 @bot.command()
 async def weather(ctx):
@@ -121,7 +110,7 @@ async def weather(ctx):
     await ctx.send(embed=embed)
     
 @bot.command()
-async def wikitest(ctx,*,search_word):
+async def wiki(ctx,*,search_word):
     """
     テスト中！使わないで！
     """

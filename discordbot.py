@@ -112,7 +112,8 @@ async def weather(ctx):
 @bot.command()
 async def wiki(ctx,*,search_word):
     """
-    テスト中！使わないで！
+    指定した単語をwikipediaで検索します。10個以内の検索候補を表示します。
+    知りたいものの左に書かれている数字を受け取ると、その単語の説明・URLを送信します。
     """
     wikipedia.set_lang('ja')
     number = 0

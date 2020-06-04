@@ -140,7 +140,8 @@ async def wiki(ctx,*,search_word):
         else:
             wiki_content = wiki_page.content
             responce_word = wiki_content[0:wiki_content.find("。")] + "。\n"
-            responce_word += wiki_page.url
+            wiki_word = urllib.parse.unquote(wiki_page.url[30:])
+            responce_word += 'https://ja.wikipedia.org/wiki/' + wiki_word
     else:
         responce_word = 'その単語は登録されてないよ！'
     

@@ -130,7 +130,12 @@ async def wiki(ctx,*,search_word):
     if len(search) > 0:
 
         def check(m):
-            return m.author == ctx.author and m.channel == ctx.channel and 1 <= int(m.content) <= len(search)
+            try:
+                int(m.content)
+            except ValueError:
+                return False
+            else:
+                return m.author == ctx.author and m.channel == ctx.channel and 1<= int(m.content) <= 10
 
         base_index = await bot.wait_for('message',check=check,timeout=60)
         index = int(base_index.content) - 1

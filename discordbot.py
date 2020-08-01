@@ -74,24 +74,6 @@ async def buki(ctx,arg='スベテ'):
     elif arg == 'スベテ':
         await ctx.send(random.choice(random_list))
 
-
-@bot.command(aliases=["kan"])
-async def kanji(ctx,yomi,kaki):
-    """
-    漢字テスト対策用コマンドです。
-    =kan 読み　書き　のように使用します。
-    """
-    await ctx.channel.send(f'「{yomi}」を漢字で書くと：||{kaki}||')
-    await ctx.message.delete()
-    
-@bot.command(aliases=["eng"])
-async def english(ctx,japanese,english):
-    """
-    英単語テスト対策用コマンドです。
-    =eng 日本語　英語　のように使用します。
-    """
-    await ctx.channel.send(f'「{japanese}」を英語で書くと：||{english}||')
-    await ctx.message.delete()
     
 @bot.command()
 async def weather(ctx):

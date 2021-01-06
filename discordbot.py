@@ -9,6 +9,7 @@ import requests
 import discord
 
 
+
 CHANNEL_ID = 684761828483792943
 bot = commands.Bot(command_prefix='=')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -135,6 +136,10 @@ async def wiki(ctx,*,search_word):
     
     embed = discord.Embed(title='検索結果', description=responce_word, color=0x00FFFF)
     await ctx.send(embed=embed)
+    
+@bot.command()
+async def notification(ctx):
+    pass
 
 
     

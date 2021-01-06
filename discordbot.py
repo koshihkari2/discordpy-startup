@@ -149,9 +149,9 @@ async def notification(ctx):
     soup = BeautifulSoup(responce.content,'lxml')
     elems = soup.select('#l-main > div:nth-child(4) > dl > dd:nth-child(2) > a')
     str_elems = str(elems)
-    url_end = re.search('html', moji).end()
+    url_end = re.search('html', str_elems).end()
     send_url = url[:-10] + str_elems[10:url_end]
-    title_start = re.search('>', moji).end()
+    title_start = re.search('>', str_elems).end()
     title = str_elems[title_start: -5]
     embed = discord.Embed(title=title, description=send_url, color=discord.Color.blue())
     await ctx.send(embed=embed)

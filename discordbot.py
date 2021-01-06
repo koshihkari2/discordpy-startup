@@ -145,7 +145,7 @@ async def notification(ctx):
         print('無視')
         return
     url = os.environ['URL']
-    responce = requests.get(URL)
+    responce = requests.get(url)
     soup = BeautifulSoup(responce.content,'lxml')
     elems = soup.select('#l-main > div:nth-child(4) > dl > dd:nth-child(2) > a')
     str_elems = str(elems)

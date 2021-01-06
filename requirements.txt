@@ -2,3 +2,4 @@ discord.py[voice]
 wikipedia
 requests
 bs4
+lxml

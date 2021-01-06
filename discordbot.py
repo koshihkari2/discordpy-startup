@@ -7,6 +7,8 @@ from discord.ext import tasks
 from datetime import datetime 
 import requests
 import discord
+from bs4 import BeautifulSoup
+import re
 
 
 
@@ -139,7 +141,20 @@ async def wiki(ctx,*,search_word):
     
 @bot.command()
 async def notification(ctx):
-    pass
+    if ctx.author.id != 625161458145034270:
+        print('無視')
+        return
+    url = os.environ['URL']
+    responce = requests.get(URL)
+    soup = BeautifulSoup(responce.content,'lxml')
+    elems = soup.select('#l-main > div:nth-child(4) > dl > dd:nth-child(2) > a')
+    str_elems = str(elems)
+    url_end = re.search('html', moji).end()
+    send_url = url[:-10] + str_elems[10:url_end]
+    title_start = re.search('>', moji).end()
+    title = str_elems[title_start: -5]
+    embed = discord.Embed(title=title, description=send_url, color=discord.Color.blue())
+    await ctx.send(embed=embed)
 
 
     
